@@ -17,14 +17,40 @@ import org.jboss.weld.event.Status;
 public class ActionCheck {
     
     private String name;
+    private String CheckValue;
+
+ 
+
+   
+    
     public String execute(){
         
         ServiceCheck servicecheck = new ServiceCheck();
         setName(servicecheck.PrintName());
+        System.out.println(CheckValue);
         return "success";
     }
 
-//    watch tutorial 6
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+//////////////////////////////////////////// Getters and Setters /////////////////////////////////////////////////////////
+    
     public String getName() {
         return name;
     }
@@ -32,4 +58,13 @@ public class ActionCheck {
     public void setName(String name) {
         this.name = name;
     }
+    
+        public String getCheckValue() {
+        return CheckValue;
+    }
+
+    public void setCheckValue(String CheckValue) {
+        this.CheckValue = CheckValue;
+    }
+    
 }

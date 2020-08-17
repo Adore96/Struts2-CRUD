@@ -7,7 +7,7 @@
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
         
-        <action name="ActionCheck" class="action.ActionCheck">
+        <action name="ActionCheck" class="com.Adore96.action.ActionCheck">
             <result name="success">/success.jsp</result>
             <result name="error">/error.jsp</result>
         </action>

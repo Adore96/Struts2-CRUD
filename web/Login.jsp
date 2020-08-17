@@ -13,7 +13,7 @@
 <style>   
 Body {  
   font-family: Calibri, Helvetica, sans-serif;  
-  background-color: pink;  
+  background-color: white;  
 }  
 button {   
        background-color: #4CAF50;   
