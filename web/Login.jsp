@@ -64,7 +64,7 @@ button {
     </s:form>
     
     <p>hello hello</p>
-    <s:property value="username"/>
+    <%--<s:property value="username"/>--%>
     
     
 <!--    <form action="LoginAction" method="post">  
