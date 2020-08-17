@@ -11,4 +11,9 @@ package com.Adore96.service;
  */
 public class ServiceCheck {
     
+    
+    
+    public String PrintName(){
+        return "Kasun";
+    } 
 }
