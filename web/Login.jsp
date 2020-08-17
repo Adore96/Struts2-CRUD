@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags" %>
+
 <!DOCTYPE html>   
 <html>   
 <head>  
@@ -51,9 +53,21 @@ button {
     }   
 </style>   
 </head>    
-<body>    
-    <center> <h1> Student Login Form </h1> </center>   
-    <form>  
+<body>   
+    
+    <center> <h1> Student Login Form </h1> </center> 
+    
+    <s:form action="LoginAction">
+        <s:textfield label="User Name" key="username"/>
+        <s:password label="Password" key="password"/>
+        <s:submit/>
+    </s:form>
+    
+    <p>hello hello</p>
+    <s:property value="username"/>
+    
+    
+<!--    <form action="LoginAction" method="post">  
         <div class="container">   
             <label>Username : </label>   
             <input type="text" placeholder="Enter Username" name="username" required>  
@@ -64,6 +78,6 @@ button {
             <button type="button" class="cancelbtn"> Cancel</button>   
             Forgot <a href="#"> password? </a>   
         </div>   
-    </form>     
+    </form>     -->
 </body>     
 </html>  

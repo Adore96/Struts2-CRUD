@@ -5,7 +5,6 @@
  */
 package com.Adore96.action;
 
-import com.Adore96.service.ServiceCheck;
 import static com.opensymphony.xwork2.Action.ERROR;
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import org.jboss.weld.event.Status;
@@ -20,13 +19,9 @@ public class ActionCheck {
     private String CheckValue;
 
  
-
-   
     
     public String execute(){
         
-        ServiceCheck servicecheck = new ServiceCheck();
-        setName(servicecheck.PrintName());
         System.out.println(CheckValue);
         return "success";
     }
