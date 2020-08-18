@@ -23,6 +23,6 @@ public class DashboardAction {
         List<StudentInfo> listUser = studentDAO.ShowTable();
         HttpSession session = request.getSession(false);
 
-        
+//        list user error
         request.setAttribute("listUser", listUser);
 }
