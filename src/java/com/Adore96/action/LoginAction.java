@@ -39,8 +39,6 @@ public class LoginAction extends ActionSupport implements ModelDriven<Object>{
         return userinputbean; //To change body of generated methods, choose Tools | Templates.
     }
     
-    
-    
     public String Login(){
         System.out.println("Insert into Login Method");
         HttpServletRequest request = ServletActionContext.getRequest();
@@ -59,11 +57,11 @@ public class LoginAction extends ActionSupport implements ModelDriven<Object>{
         if (status){
             HttpSession session = request.getSession();
             session.setAttribute("username",username);
-            System.out.println("Login Succesfull.!");
+            System.out.println("Login Succesfull from LoginAction!");
             Action = "success";
             
         }else{
-            System.out.println("Login Failure");
+            System.out.println("Login Failure from LoginAction.");
             Action = "failure";
             
         }

@@ -5,21 +5,22 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <package name="LoginPackage" extends="struts-default">
-        
-        <!--        <action name="HelloWorld" class="example.HelloWorld">
-            <result>/example/HelloWorld.jsp</result>
-        </action>-->
-        
-        <!--         <action name="ActionCheck" class="com.Adore96.action.ActionCheck">
-            <result name="success">/success.jsp</result>
-            <result name="error">/error.jsp</result>
-        </action>-->
+    <package name="default" extends="struts-default">
         
         <action name="LoginAction" class="com.Adore96.action.LoginAction" method="Login">
             <result name="success">/Dashboard.jsp</result>
             <result name="failure">/Login.jsp</result>
         </action>
+        
+        <action name="RegisterAction" class="com.Adore96.action.RegisterAction" method="Login">
+            <result name="success">/Dashboard.jsp</result>
+            <result name="failure">/Login.jsp</result>
+        </action>
+        
+        
+        
+        
+        
     </package>
     
 </struts>
