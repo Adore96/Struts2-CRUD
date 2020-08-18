@@ -9,11 +9,11 @@ package com.Adore96.dao;
  *
  * @author kasun_k
  */
-public class StudentInfo {
+public class StudentDAO {
     private String fname , lname , username , password , telephone ;
 
 
-    public StudentInfo() {
+    public StudentDAO() {
     }
 
     public String getFname() {
@@ -56,7 +56,7 @@ public class StudentInfo {
         this.telephone = telephone;
     }
 
-    public StudentInfo(String fname, String lname, String uname, String password, String telephone) {
+    public StudentDAO(String fname, String lname, String uname, String password, String telephone) {
         this.fname = fname;
         this.lname = lname;
         this.username = uname;

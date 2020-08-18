@@ -6,26 +6,38 @@
 package com.Adore96.action;
 
 
+import com.Adore96.bean.UserInputBean;
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+import javax.servlet.http.HttpServletRequest;
+import org.apache.struts2.ServletActionContext;
 
 /**
  *
  * @author kasun_k
  */
-public class LoginAction {
-    private String username;
-    private String password;
+public class LoginAction extends ActionSupport implements ModelDriven<Object>{
+    
+    UserInputBean userinputbean = new UserInputBean();
 
-
+    @Override
+    public Object getModel() {
+        return userinputbean; //To change body of generated methods, choose Tools | Templates.
+    }
     
     public String execute(){
-        System.out.println("Hello from LoginAction Java.");
-        System.out.println("Username is : "+getUsername());
-        System.out.println("Password is : "+getPassword());
         return "success";
     }
     
     public void Login(){
-        System.out.println("sout from login method.");
+        
+        HttpServletRequest request = ServletActionContext.getRequest();
+
+        System.out.println(userinputbean.getUsername());
+        System.out.println(userinputbean.getPassword());
+        
+        
+        
         
     }
     
@@ -36,20 +48,6 @@ public class LoginAction {
     
     //////////////////////////////////////////////////////Getters and Setters///////////////////////////////////
     
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+   
     
 }
