@@ -18,7 +18,7 @@
         
         <action name="LoginAction" class="com.Adore96.action.LoginAction" method="Login">
             <result name="success">/Dashboard.jsp</result>
-            <result name="error">/error.jsp</result>
+            <result name="failure">/Login.jsp</result>
         </action>
     </package>
     

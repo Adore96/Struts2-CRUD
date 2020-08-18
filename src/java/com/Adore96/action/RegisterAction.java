@@ -9,6 +9,6 @@ package com.Adore96.action;
  *
  * @author kasun_k
  */
-public class AddStudentAction {
+public class RegisterAction {
     
 }

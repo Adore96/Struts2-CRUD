@@ -63,9 +63,6 @@ button {
         <s:submit/>
     </s:form>
     
-    <p>hello hello</p>
-    <%--<s:property value="username"/>--%>
-    
     
 <!--    <form action="LoginAction" method="post">  
         <div class="container">   

@@ -13,6 +13,6 @@
     </head>
     <body>
         <h1>Error Occured.</h1>
-        <button><a href="Login.jsp">Go to the Login Page.</a></button>
+        <button><a href="/Login.jsp">Go to the Login Page.</a></button>
     </body>
 </html>
