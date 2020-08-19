@@ -5,10 +5,23 @@
  */
 package com.Adore96.action;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import org.apache.struts2.ServletActionContext;
+
 /**
  *
  * @author kasun_k
  */
 public class LogoutAction {
-    
+    public String Logout(){
+        
+        HttpServletRequest request = ServletActionContext.getRequest();
+        
+        HttpSession session = request.getSession(false);
+        System.out.println("Session username : "+session.getAttribute("username"));
+        session.invalidate();
+        
+        return "loggedOut";
+    }
 }

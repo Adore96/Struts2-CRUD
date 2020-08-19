@@ -7,6 +7,7 @@ package com.Adore96.action;
 
 import com.Adore96.dao.StudentDAO;
 import com.Adore96.model.StudentInfo;
+import com.opensymphony.xwork2.ActionSupport;
 import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
@@ -18,7 +19,17 @@ import org.apache.struts2.ServletActionContext;
  *
  * @author kasun_k
  */
-public class DashboardAction {
+public class DashboardAction extends ActionSupport{
+    
+    private String username;
+    
+    
+    
+    public String DeleteUser(){
+        System.out.println(getUsername());
+        
+        return "success";
+    }
 
     public String ListUser() {
         System.out.println("Listuser method called in Dashboard action.");
@@ -37,5 +48,25 @@ public class DashboardAction {
             return "showtabledata";
         }
 
+    }
+    
+    public String execute(){
+        
+        
+        return "success";
+    }
+
+    /**
+     * @return the username
+     */
+    public String getUsername() {
+        return username;
+    }
+
+    /**
+     * @param username the username to set
+     */
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

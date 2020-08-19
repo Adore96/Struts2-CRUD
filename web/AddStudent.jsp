@@ -11,7 +11,7 @@
 <html>   
 <head>  
 <meta name="viewport" content="width=device-width, initial-scale=1">  
-<title> Registration Page </title>  
+<title> Add Student Page </title>  
 <style>   
 Body {  
   font-family: Calibri, Helvetica, sans-serif;  
@@ -55,7 +55,7 @@ button {
 </head>    
 <body>   
     
-    <center> <h1> Student Registration Form </h1> </center> 
+    <center> <h1>Add Student Form.</h1> </center> 
     
     <s:form action="AddStudent">
         <s:textfield label="First Name" key="fname"/>
@@ -66,7 +66,6 @@ button {
         <s:submit/>
     </s:form>
     
-
 </body>     
 </html>  
 

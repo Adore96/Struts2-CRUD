@@ -330,7 +330,7 @@
                                 <a href="#logoutModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i>
                                     <span>Logout</span></a>
                                 <a href="AddStudent.jsp" class="btn btn-success"><i
-                                        class="material-icons">&#xE147;</i> <span>Add New Student</span></a>
+                                        class="material-icons">&#xE147;</i><span>Add New Student</span></a>
                             </div>
                         </div>
                     </div>
@@ -372,47 +372,6 @@
             </div>
         </div>
 
-        <!-- Edit Modal HTML -->
-<!--        <form action="AddStudent" method="post">
-            <div id="addEmployeeModal" class="modal fade">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <h4 class="modal-title">Add Student</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label>First Name</label>
-                                <input id="newfname" name="newfname" type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Last Name</label>
-                                <input id="newlname" name="newlname" type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Mobile Number</label>
-                                <input id="newtelephone" name="newtelephone" type="number" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>User Name</label>
-                                <input id="newuname" name="newuname" type="text" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input id="newpassword" name="newpassword" type="password" class="form-control" required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                            <input type="submit" class="btn btn-success" value="Add">
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </form>-->
         <%--    Logout Modal--%>
         <div id="logoutModal" class="modal fade">
             <div class="modal-dialog">

@@ -22,7 +22,11 @@
         </action>
         
         <action name="AddStudent" class="com.Adore96.action.AddStudentAction" method="AddStudent">
-            <result name="success">/Dashboard.jsp</result>
+            <result name="success" type="redirect">list.action</result>
+        </action>
+        
+        <action name="LogoutDashBoard" class="com.Adore96.action.LogoutAction" method="Logout">
+            <result name="loggedOut">/Login.jsp</result>
         </action>
 
     </package>
