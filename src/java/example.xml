@@ -7,25 +7,24 @@
 <struts>
     <package name="default" extends="struts-default">
         
+        
         <action name="LoginAction" class="com.Adore96.action.LoginAction" method="Login">
             <result name="success" type="redirect">list.action</result>
             <result name="failure">/Login.jsp</result>
         </action>
-        
-        <action name="RegisterAction" class="com.Adore96.action.RegisterAction" method="Login">
-            <result name="success">/DashBoardAction</result>
-            <result name="failure">/Login.jsp</result>
-        </action>
-        
         <action name="list" class="com.Adore96.action.DashboardAction" method="ListUser">
             <result name="showtabledata">/Dashboard.jsp</result>
             <result name="emptylist">/example/HelloWorld.jsp</result>
         </action>
         
-<!--        <action name="*" class="com.Adore96.action.DashBoardAction" method="ListUser">
-            <result name="showtabledata" type="redirect">list.action</result>
-        </action>-->
+        <action name="RegisterAction" class="com.Adore96.action.RegisterAction" method="RegisterStudent">
+            <result name="success">/Login.jsp</result>
+        </action>
         
+        <action name="AddStudent" class="com.Adore96.action.AddStudentAction" method="AddStudent">
+            <result name="success">/Dashboard.jsp</result>
+        </action>
+
     </package>
     
 </struts>

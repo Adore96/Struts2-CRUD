@@ -10,13 +10,12 @@ import com.Adore96.dao.StudentDAO;
 import com.Adore96.model.StudentInfo;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
-import javax.servlet.RequestDispatcher;
 
 /**
  *
  * @author kasun_k
  */
-public class RegisterAction extends ActionSupport implements ModelDriven<Object> {
+public class AddStudentAction extends ActionSupport implements ModelDriven<Object>{
 
     UserInputBean userInputBean = new UserInputBean();
     StudentInfo studentinfo = new StudentInfo();
@@ -27,9 +26,9 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Object>
         return userInputBean; //To change body of generated methods, choose Tools | Templates.
     }
 
-    public String RegisterStudent() {
+    public String AddStudent() {
         
-        System.out.println("Register Student method called.");
+        System.out.println("Add Student method called.");
 
         String fname = userInputBean.getFname();
         String lname = userInputBean.getLname();
@@ -50,5 +49,4 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Object>
         return "success";
     }
 
-    
 }

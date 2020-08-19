@@ -6,7 +6,6 @@ kasin asfad
  */
 package com.Adore96.action;
 
-
 import com.Adore96.bean.UserInputBean;
 import com.Adore96.dao.StudentDAO;
 import com.Adore96.model.StudentInfo;
@@ -22,14 +21,13 @@ import org.apache.struts2.ServletActionContext;
  *
  * @author kasun_k
  */
-public class LoginAction extends ActionSupport implements ModelDriven<Object>{
-    
-    
-    public String execute(){
+public class LoginAction extends ActionSupport implements ModelDriven<Object> {
+
+    public String execute() {
         System.out.println("Execute method");
         return "success";
     }
-    
+
     UserInputBean userinputbean = new UserInputBean();
     StudentDAO studentdao = new StudentDAO();
     StudentInfo studentInfo = new StudentInfo();
@@ -38,47 +36,38 @@ public class LoginAction extends ActionSupport implements ModelDriven<Object>{
     public Object getModel() {
         return userinputbean; //To change body of generated methods, choose Tools | Templates.
     }
-    
-    public String Login(){
+
+    public String Login() {
         System.out.println("Insert into Login Method");
         HttpServletRequest request = ServletActionContext.getRequest();
-        
-         String username = userinputbean.getUsername();
-         String password = userinputbean.getPassword();
-         
-         String Action;
-         
-         studentInfo.setUsername(username);
-         studentInfo.setPassword(password);
-         
+
+        String username = userinputbean.getUsername();
+        String password = userinputbean.getPassword();
+
+        String Action;
+
+        studentInfo.setUsername(username);
+        studentInfo.setPassword(password);
+
         studentdao.logIn(studentInfo);
 
         boolean status = studentdao.logIn(studentInfo);
-        if (status){
+        if (status) {
             HttpSession session = request.getSession();
-            session.setAttribute("username",username);
+            session.setAttribute("username", username);
             System.out.println("Login Succesfull from LoginAction!");
             Action = "success";
-            
-        }else{
+
+        } else {
             System.out.println("Login Failure from LoginAction.");
             Action = "failure";
-            
+
         }
         out.flush();
         out.close();
-        
-        System.out.println("Action : "+Action);
-      return Action;  
+
+        System.out.println("Action : " + Action);
+        return Action;
     }
-    
-    
-    
-    
-    
-    
-    //////////////////////////////////////////////////////Getters and Setters///////////////////////////////////
-    
-   
-    
+
 }
