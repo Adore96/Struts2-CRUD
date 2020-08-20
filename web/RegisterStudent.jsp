@@ -58,11 +58,11 @@ button {
     <center> <h1> Student Registration Form </h1> </center> 
     
     <s:form action="RegisterAction">
-        <s:textfield label="First Name" key="fname"/>
-        <s:textfield label="Last Name" key="lname"/>
-        <s:textfield label="User Name" key="username"/>
-        <s:password label="Password" key="password"/>
-        <s:textfield label="Telephone Number" key="telephone"/>
+        <s:textfield label="First Name" key="fname" size="15" />
+        <s:textfield label="Last Name" key="lname" size="15"/>
+        <s:textfield label="User Name" key="username" size="15"/>
+        <s:password label="Password" key="password" size="8" />
+        <s:textfield label="Telephone Number" key="telephone" size="10"/>
         <s:submit/>
     </s:form>
     

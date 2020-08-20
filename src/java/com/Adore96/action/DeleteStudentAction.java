@@ -21,7 +21,6 @@ public class DeleteStudentAction extends ActionSupport {
 
     public String DeleteStudent() {
 
-        StudentDAO studentdao = new StudentDAO();
         StudentInfo studentInfo = new StudentInfo();
 
         HttpServletRequest request = ServletActionContext.getRequest();
@@ -32,7 +31,7 @@ public class DeleteStudentAction extends ActionSupport {
         studentInfo.setUsername(username);
 
         try {
-            studentdao.DeleteUser(studentInfo);
+            new StudentDAO().DeleteUser(new StudentInfo(username));
             return "success";
 
         } catch (SQLException throwables) {

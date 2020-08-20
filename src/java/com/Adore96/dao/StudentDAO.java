@@ -89,7 +89,6 @@ public class StudentDAO {
 
     public void DeleteUser(StudentInfo studentInfo) throws SQLException {
         final String sql ="delete from student where username =?";
-
         try {
             con = DatabaseConnection.getConnection();
             PreparedStatement preparedStatement = con.prepareStatement(sql);
@@ -99,10 +98,11 @@ public class StudentDAO {
             con.close();
         }
         catch (Exception e){
+            con.rollback();
             String result = "Data was not inserted.";
             System.out.println(result);
             System.out.println(e);
-        }
+        } 
     }
 
 

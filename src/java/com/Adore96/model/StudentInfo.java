@@ -10,10 +10,14 @@ package com.Adore96.model;
  * @author kasun_k
  */
 public class StudentInfo {
-     private String fname , lname , username , password , telephone ;
 
+    private String fname, lname, username, password, telephone;
 
     public StudentInfo() {
+    }
+
+    public StudentInfo(String username) {
+        this.username = username;
     }
 
     public String getFname() {
