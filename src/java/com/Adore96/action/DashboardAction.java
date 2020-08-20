@@ -33,10 +33,10 @@ public class DashboardAction extends ActionSupport{
 
     public String ListUser() {
         System.out.println("Listuser method called in Dashboard action.");
-        StudentDAO studentDAO = new StudentDAO();
+//        StudentDAO studentDAO = new StudentDAO();
         HttpServletRequest request = ServletActionContext.getRequest();
 
-        List<StudentInfo> listUser = studentDAO.ShowTable();
+        List<StudentInfo> listUser = new StudentDAO().ShowTable();
         HttpSession session = request.getSession(false);
 
 //        list user error
