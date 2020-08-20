@@ -20,7 +20,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Object>
 
     UserInputBean userInputBean = new UserInputBean();
     StudentInfo studentinfo = new StudentInfo();
-    StudentDAO studentdao = new StudentDAO();
+//    StudentDAO studentdao = ;
 
     @Override
     public Object getModel() {
@@ -45,7 +45,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Object>
         String stringtelephone = Integer.toString(telephone);
         studentinfo.setTelephone(stringtelephone);
 
-        studentdao.registerStudent(studentinfo);
+        new StudentDAO().registerStudent(studentinfo);
         
         return "success";
     }

@@ -20,7 +20,7 @@ public class UpdateStudentAction {
 
         System.out.println("doGet in edit servlet");
         
-        StudentDAO studentdao = new StudentDAO();
+//        StudentDAO studentdao = ;
         StudentInfo studentInfo = new StudentInfo();
         
         HttpServletRequest request = ServletActionContext.getRequest();
@@ -31,7 +31,7 @@ public class UpdateStudentAction {
         
         studentInfo.setUsername(username);
         
-        StudentInfo studentInfo1 = studentdao.ShowEditTable(studentInfo);
+        StudentInfo studentInfo1 = new StudentDAO().ShowEditTable(studentInfo);
         
         if (studentInfo1 == null) {
             System.out.println("Student info is empty.");
