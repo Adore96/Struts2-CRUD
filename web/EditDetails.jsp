@@ -31,31 +31,31 @@
                                 <h2>Edit User</h2><br>
                                 <fieldset class="form-group">
                                     <label>First Name</label> <input type="text"
-                                                                     value="<c:out value='${user.fname}'/>" class="form-control"
+                                                                     value="<c:out value='${studentInfo1.fname}'/>" class="form-control"
                                                                      name="fname" required="required">
                                 </fieldset>
 
                                 <fieldset class="form-group">
                                     <label>Last Name</label> <input type="text"
-                                                                    value="<c:out value='${user.lname}' />" class="form-control"
+                                                                    value="<c:out value='${studentInfo1.lname}' />" class="form-control"
                                                                     name="lname" required="required">
                                 </fieldset>
 
                                 <fieldset class="form-group">
                                     <label>Username</label> <input type="text"
-                                                                   value="<c:out value='${user.username}' />" class="form-control"
+                                                                   value="<c:out value='${studentInfo1.username}' />" class="form-control"
                                                                    name="username" readonly>
                                 </fieldset>
 
                                 <fieldset class="form-group">
                                     <label>Password</label> <input type="password"
-                                                                   value="<c:out value='${user.password}' />" class="form-control"
+                                                                   value="<c:out value='${studentInfo1.password}' />" class="form-control"
                                                                    name="password" readonly>
                                 </fieldset>
 
                                 <fieldset class="form-group">
                                     <label>Mobile Number</label> <input type="number"
-                                                                        value="<c:out value='${user.telephone}' />" class="form-control"
+                                                                        value="<c:out value='${studentInfo1.telephone}' />" class="form-control"
                                                                         name="telephone" required="required">
                                 </fieldset>
 

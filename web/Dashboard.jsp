@@ -352,9 +352,9 @@
                                     <td><c:out value="${user.lname}"/></td>
                                     <td><c:out value="${user.username}"/></td>
                                     <td><c:out value="${user.telephone}"/></td>
-                                    <td><a href="update?username=<c:out value='${user.username}'/>">Edit</a>
+                                    <td><a href="UpdateStudent?username=<c:out value='${user.username}'/>">Edit</a>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="delete?username=<c:out value='${user.username}'/>">Delete</a></td>
+                                        <a href="DeleteStudent?username=<c:out value='${user.username}'/>">Delete</a></td>
                                 </tr>
                             </c:forEach>
                         </tbody>

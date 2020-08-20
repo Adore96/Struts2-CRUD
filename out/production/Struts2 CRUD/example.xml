@@ -27,17 +27,6 @@
         
         <action name="DeleteStudent" class="com.Adore96.action.DeleteStudentAction" method="DeleteStudent">
             <result name="success" type="redirect">list.action</result>
-            <result name="FailtoDelete">/LoginError.jsp</result>
-        </action>
-        
-        <action name="UpdateStudent" class="com.Adore96.action.UpdateStudentAction" method="UpdateStudent">
-            <result name="showtabledata">/EditDetails.jsp</result>
-            <result name="FailtoDelete">/LoginError.jsp</result>
-        </action>
-        
-        <action name="FinalUpdate" class="com.Adore96.action.FinalUpdateAction" method="FinalUpdate">
-            <result name="UpdateDone" type="redirect">list.action</result>
-            <result name="UpdateFail">/LoginError.jsp</result>
         </action>
         
         <action name="LogoutDashBoard" class="com.Adore96.action.LogoutAction" method="Logout">
