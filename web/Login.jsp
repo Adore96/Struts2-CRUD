@@ -71,9 +71,9 @@
     <center> <h1> Student Login Form </h1> </center> 
 
     <s:form action="LoginAction">
-        <s:textfield label="User Name" key="username"/>
-        <s:password label="Password" key="password"/>
-        <s:submit/>
+        <s:textfield label="User Name" key="username" size="15"/>
+        <s:password label="Password" key="password" size="15"/>
+        <s:submit align="center"/>
     </s:form>
     <a href="RegisterStudent.jsp">New Student? Signup Here.</a><br>
 
