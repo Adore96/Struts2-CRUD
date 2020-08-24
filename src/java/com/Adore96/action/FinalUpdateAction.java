@@ -15,12 +15,11 @@ import org.apache.struts2.ServletActionContext;
  * @author kasun_k
  */
 public class FinalUpdateAction {
-    
-    
-    public String FinalUpdate(){
+
+    public String FinalUpdate() {
         StudentInfo studentInfo = new StudentInfo();
         StudentDAO userDAO = new StudentDAO();
-         HttpServletRequest request = ServletActionContext.getRequest();
+        HttpServletRequest request = ServletActionContext.getRequest();
 
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
@@ -34,7 +33,12 @@ public class FinalUpdateAction {
         studentInfo.setPassword(password);
         studentInfo.setTelephone(telephone);
 
-        userDAO.finalUpdate(studentInfo);
+        if (studentInfo.UpdateStudentValidation() == 1) {
+            userDAO.finalUpdate(studentInfo);
+            System.out.println("update student validation passed");
+        }else{
+            System.out.println("update student validation failed.");
+        }
 
         return "UpdateDone";
     }
