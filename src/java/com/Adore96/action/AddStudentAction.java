@@ -36,6 +36,8 @@ public class AddStudentAction extends ActionSupport implements ModelDriven<Objec
         String password = userInputBean.getPassword();
         int telephone = userInputBean.getTelephone();
         
+        
+        
         studentinfo.setFname(fname);
         studentinfo.setLname(lname);
         studentinfo.setUsername(username);

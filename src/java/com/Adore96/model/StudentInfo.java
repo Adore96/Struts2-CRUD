@@ -67,4 +67,8 @@ public class StudentInfo {
         this.password = password;
         this.telephone = telephone;
     }
+    
+    public String Validation(){
+        return null;
+    }
 }
