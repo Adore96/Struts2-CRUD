@@ -38,20 +38,21 @@ public class LoginAction extends ActionSupport implements ModelDriven<Object> {
     }
 
     public String Login() {
+
+        String Action;
+        boolean status = studentdao.logIn(studentInfo);
+
         System.out.println("Insert into Login Method");
         HttpServletRequest request = ServletActionContext.getRequest();
 
         String username = userinputbean.getUsername();
         String password = userinputbean.getPassword();
 
-        String Action;
-
         studentInfo.setUsername(username);
         studentInfo.setPassword(password);
 
         studentdao.logIn(studentInfo);
 
-        boolean status = studentdao.logIn(studentInfo);
         if (status) {
             HttpSession session = request.getSession();
             session.setAttribute("username", username);

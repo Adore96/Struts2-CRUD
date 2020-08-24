@@ -28,7 +28,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Object>
     }
 
     public String RegisterStudent() {
-        
+
         System.out.println("Register Student method called.");
 
         String fname = userInputBean.getFname();
@@ -36,19 +36,23 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Object>
         String username = userInputBean.getUsername();
         String password = userInputBean.getPassword();
         int telephone = userInputBean.getTelephone();
-        
+
         studentinfo.setFname(fname);
         studentinfo.setLname(lname);
         studentinfo.setUsername(username);
         studentinfo.setPassword(password);
-        
-        String stringtelephone = Integer.toString(telephone);
-        studentinfo.setTelephone(stringtelephone);
 
-        new StudentDAO().registerStudent(studentinfo);
-        
-        return "success";
+        if (studentinfo.RegisterValidation() == 1) {
+            String stringtelephone = Integer.toString(telephone);
+            studentinfo.setTelephone(stringtelephone);
+
+            new StudentDAO().registerStudent(studentinfo);
+
+            return "success";
+        } else {
+            return "fail";
+        }
+
     }
 
-    
 }

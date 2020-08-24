@@ -67,8 +67,61 @@ public class StudentInfo {
         this.password = password;
         this.telephone = telephone;
     }
+
+    /////////////////////////////////////////////////////Validation.//////////////////////////////////////////////////////////
     
-    public String Validation(){
-        return null;
+    
+    public int LoginValidation() {
+
+        if ((username == null || username.trim().equals("")) && (password == null || password.trim().equals(""))) {
+
+            return 0;
+        } else {
+
+            return -1;
+        }
+    }
+
+    public int RegisterValidation() {
+
+        if ((username == null || username.trim().equals("")) && (password == null || password.trim().equals(""))) {
+            System.out.println("Username or password is empty.");
+            if ((fname == null || fname.trim().equals("")) && (lname == null || lname.trim().equals(""))) {
+                System.out.println("fname or lname,username or password is empty.");
+            } else {
+                System.out.println("fname lname ok,uname password is empty");
+            }
+            return 0;
+        } else {
+            System.out.println("Register validation all parameters filled");
+            return 1;
+        }
+    }
+
+    public int AddStudentValidation() {
+
+        if ((username == null || username.trim().equals("")) && (password == null || password.trim().equals(""))) {
+            System.out.println("Username or password is empty.");
+            if ((fname == null || fname.trim().equals("")) && (lname == null || lname.trim().equals(""))) {
+                System.out.println("fname or lname,username or password is empty.");
+            } else {
+                System.out.println("fname lname ok,uname password is empty");
+            }
+            return 0;
+        } else {
+            System.out.println("AddStudent validation all parameters filled");
+            return 1;
+        }
+    }
+
+    public int UpdateStudentValidation() {
+
+        if ((fname == null || fname.trim().equals("")) && (lname == null || lname.trim().equals("")) && (telephone == null || telephone.trim().equals(""))) {
+            System.out.println("fname or lname,username or password is empty.");
+        } else {
+            System.out.println("fname lname ok,uname password is empty");
+        }
+        return 0;
+
     }
 }

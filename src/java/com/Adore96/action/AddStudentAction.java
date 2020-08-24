@@ -15,7 +15,7 @@ import com.opensymphony.xwork2.ModelDriven;
  *
  * @author kasun_k
  */
-public class AddStudentAction extends ActionSupport implements ModelDriven<Object>{
+public class AddStudentAction extends ActionSupport implements ModelDriven<Object> {
 
     UserInputBean userInputBean = new UserInputBean();
     StudentInfo studentinfo = new StudentInfo();
@@ -27,7 +27,7 @@ public class AddStudentAction extends ActionSupport implements ModelDriven<Objec
     }
 
     public String AddStudent() {
-        
+
         System.out.println("Add Student method called.");
 
         String fname = userInputBean.getFname();
@@ -35,20 +35,23 @@ public class AddStudentAction extends ActionSupport implements ModelDriven<Objec
         String username = userInputBean.getUsername();
         String password = userInputBean.getPassword();
         int telephone = userInputBean.getTelephone();
-        
-        
-        
+
         studentinfo.setFname(fname);
         studentinfo.setLname(lname);
         studentinfo.setUsername(username);
         studentinfo.setPassword(password);
-        
-        String stringtelephone = Integer.toString(telephone);
-        studentinfo.setTelephone(stringtelephone);
 
-        new StudentDAO().registerStudent(studentinfo);
-        
-        return "success";
+        if (studentinfo.AddStudentValidation() == 1) {
+            String stringtelephone = Integer.toString(telephone);
+            studentinfo.setTelephone(stringtelephone);
+
+            new StudentDAO().registerStudent(studentinfo);
+
+            return "success";
+        } else {
+            return "Empty Data Fields.";
+        }
+
     }
 
 }

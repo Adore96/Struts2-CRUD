@@ -19,20 +19,20 @@ public class UpdateStudentAction {
     public String UpdateStudent() {
 
         System.out.println("doGet in edit servlet");
-        
+
 //        StudentDAO studentdao = ;
         StudentInfo studentInfo = new StudentInfo();
-        
+
         HttpServletRequest request = ServletActionContext.getRequest();
 
         String username = request.getParameter("username");
-        
+
         System.out.println("EditStudent Servlet id : " + username);
-        
+
         studentInfo.setUsername(username);
-        
+
         StudentInfo studentInfo1 = new StudentDAO().ShowEditTable(studentInfo);
-        
+
         if (studentInfo1 == null) {
             System.out.println("Student info is empty.");
             return "emptyObject";
@@ -40,10 +40,6 @@ public class UpdateStudentAction {
             request.setAttribute("studentInfo1", studentInfo1);
             return "showtabledata";
         }
-
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("EditDetails.jsp");
-//        request.setAttribute("user", studentInfo1);
-//        dispatcher.forward(request, response);
 
     }
 }
