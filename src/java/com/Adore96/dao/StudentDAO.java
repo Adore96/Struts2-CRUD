@@ -71,10 +71,10 @@ public class StudentDAO {
             ResultSet rs = ps1.executeQuery();
 
             if (rs.next()) {
-                System.out.println("Login Success");
+                System.out.println("StudentDAO.login : Login Success");
                 status = true;
             } else {
-                System.out.println("Login Error");
+                System.out.println("StudentDAO.login : Login Error");
                 status = false;
             }
             con.close();
